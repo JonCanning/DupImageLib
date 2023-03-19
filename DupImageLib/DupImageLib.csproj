@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net7</TargetFramework>
     <PackageId>DupImageLib</PackageId>
     <Authors>Jukka Teittinen</Authors>
     <Title>DupImageLib</Title>
@@ -15,12 +15,10 @@
     <PackageTags>Image Duplicate Similar Perceptual Hash</PackageTags>
     <PackageReleaseNotes>https://github.com/Quickshot/DupImageLib/releases</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.2" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.0" />
   </ItemGroup>
 
 </Project>

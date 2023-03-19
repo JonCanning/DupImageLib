@@ -25,10 +25,9 @@ namespace DupImageLib
                 Mode = ResizeMode.Stretch,
                 Sampler = new BicubicResampler()
             }).Grayscale());
-
-            image.TryGetSinglePixelSpan(out var pixelSpan);
+            
+            image.DangerousTryGetSinglePixelMemory(out var pixelSpan);
             var pixelArray = pixelSpan.ToArray();
-
             var pixelCount = width * height;
             var bytes = new byte[pixelCount];
             for (var i = 0; i < pixelCount; i++)

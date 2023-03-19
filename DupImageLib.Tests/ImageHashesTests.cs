@@ -94,7 +94,7 @@ namespace DupImageLib.Tests
             hash2[0] = 0x0fff0000ffff0000;
 
             var result = ImageHashes.CompareHashes(hash1, hash2);
-            Assert.Equal(1.0f, result, 4);
+            Assert.Equal(1.0f, result, 4f);
         }
 
         [Fact]
@@ -114,7 +114,7 @@ namespace DupImageLib.Tests
             hash2[3] = 0x0fff0000ffff0000;
 
             var result = ImageHashes.CompareHashes(hash1, hash2);
-            Assert.Equal(1.0f, result, 4);
+            Assert.Equal(1.0f, result, 4f);
         }
 
         [Fact]
@@ -127,7 +127,7 @@ namespace DupImageLib.Tests
             hash2[0] = ulong.MaxValue;
 
             var result = ImageHashes.CompareHashes(hash1, hash2);
-            Assert.Equal(0.0f, result, 4);
+            Assert.Equal(0.0f, result, 4f);
         }
 
         [Fact]
@@ -140,7 +140,7 @@ namespace DupImageLib.Tests
             hash2[0] = ulong.MaxValue;
 
             var result = ImageHashes.CompareHashes(hash1, hash2);
-            Assert.Equal(0.5f, result, 4);
+            Assert.Equal(0.5f, result, 4f);
         }
 
         [Theory]
@@ -150,7 +150,7 @@ namespace DupImageLib.Tests
         public void CompareHashes_ulongVersion(ulong hash1, ulong hash2, float similarity)
         {
             var result = ImageHashes.CompareHashes(hash1, hash2);
-            Assert.Equal(similarity, result, 4);
+            Assert.Equal(similarity, result, 4f);
         }
     }
 }
